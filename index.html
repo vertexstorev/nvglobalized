@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>nv globalized</title>
+
+	<!-- font awesome cdn link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+
+	<!-- custom css file link -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- custom javascript file link -->
+	 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+	 <script src="js/supabase.js"></script>
+	 <!-- <script src="js/script.js" defer></script> -->
+
+	 <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+	(function(){
+		emailjs.init({
+			publicKey: "1f5eT5uTinI2-vnIZ",
+		});
+	})();
+	</script>
+
+</head>
+<body>
+
+	<!-- header section starts -->
+	<header class="header">
+		<a href="#" class="logo">NV.<span>GLOBALIZED</span></a>
+
+		<nav class="navbar">
+			<a href="#home">home</a>
+			<a href="#about">fields</a>
+			<a href="#services">work</a>
+			<a href="#projects">pictures</a>
+			<a href="#pricing">list</a>
+			<a href="#contact">contact</a>
+			<a href="staff.html">staff</a>
+		</nav>
+
+		<div class="icons">
+			<div id="menu-btn" class="fas fa-bars"></div>
+			<div id="info-btn" class="fas fa-info-circle"></div>
+			<div id="search-btn" class="fas fa-search"></div>
+			<div id="login-btn" class="fas fa-user"></div>
+		</div>
+
+		<form action="" class="search-form">
+			<input type="search" name="" placeholder="search here..." id="search-box">
+			<label for="search-box" class="fas fa-search"></label>
+		</form>
+
+		<form action="" class="login-form">
+			<h3>login form</h3>
+			<input type="email" id="email" placeholder="enter your email" class="box">
+			<input type="password" id="password" placeholder="enter your password" class="box">
+			<div class="flex">
+				<input type="checkbox" name="" id="remember-me">
+				<label for="remember-me">remember me</label>
+				<a href="#">forgot password?</a>
+			</div>
+			<input type="submit" id="submit" value="login now" class="btn">
+			<p>don't have an account <a href="signup.html">Sign Up</a></p>
+		</form>
+
+	</header>
+
+	<div class="contact-info">
+
+		<div id="close-contact-info" class="fas fa-times"></div>
+		
+		<div class="info">
+			<i class="fas fa-phone"></i>
+			<h3>phone number</h3>
+			<p>+256 701 544 307</p>
+			<p>+256 782 544 307</p>
+			<p>+256 777 377 429</p>
+			<p>+256 759 293 187</p>
+		</div>
+
+		<div class="info">
+			<i class="fas fa-envelope"></i>
+			<h3>email address</h3>
+			<p>venaniragire09@gmail.com</p>
+			<p>venaniragire@gmail.com</p>
+			<!-- <p>vertexvstore@gmail.com</p> -->
+		</div>
+
+		<div class="info">
+			<i class="fas fa-map-marker-alt"></i>
+			<h3>Office address</h3>
+			<p>Ndeeba - near Stabex</p>
+			<p>Kampala, Uganda - 2525</p>
+		</div>
+
+		<div class="share">
+			<a href="#" class="fab fa-facebook-f"></a>
+			<a href="#" class="fab fa-twitter"></a>
+			<a href="#" class="fab fa-instagram"></a>
+			<a href="#" class="fab fa-linkedin"></a>
+		</div>
+
+	</div>
+	<!-- header section ends -->
+
+	<!-- home section starts -->
+
+	<section class="home" id="home">
+
+		<div class="swiper home-slider">
+
+			<div class="swiper-wrapper">
+
+				<section class="swiper-slide slide">
+					<!-- autoplay muted -->
+    				<video class="bg-video" autoplay muted loop playsinline preload="auto">
+        				<source src="images/vid/YouCut_20260511_230009404.mp4" type="video/mp4">
+    				</video>
+
+    				<div class="content">
+        				<h3>we provide best the services</h3>
+        				<!-- <p>Lorem ipsum dolor sit amet...</p>
+        				<a href="#about" class="btn">get started</a> -->
+    				</div>
+
+				</section>
+
+				<section class="swiper-slide slide">
+					<video class="bg-video" autoplay muted loop playsinline preload="auto">
+        				<source src="images/vid/YouCut_20260511_230009404.mp4" type="video/mp4">
+    				</video>
+
+					<div class="content">
+						<h3>making dream come to life</h3>
+						<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, laboriosam. Nulla iure quasi vero necessitatibus eius ducimus sint? Fugit obcaecati fuga ab et quisquam voluptatibus dolore hic possimus perferendis aut.</p>
+						<a href="#about" class="btn">get started</a> -->
+					</div>
+
+				</section>
+
+				<section class="swiper-slide slide" >
+					<video class="bg-video" autoplay muted loop playsinline preload="auto">
+        				<source src="images/vid/YouCut_20260511_230009404.mp4" type="video/mp4">
+    				</video>
+					<div class="content">
+						<h3>from concept to creation</h3>
+						<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, laboriosam. Nulla iure quasi vero necessitatibus eius ducimus sint? Fugit obcaecati fuga ab et quisquam voluptatibus dolore hic possimus perferendis aut.</p>
+						<a href="#about" class="btn">get started</a> -->
+					</div>
+
+				</section>
+
+			</div>
+
+			<!-- <div class="swiper-button-next"></div>
+    		<div class="swiper-button-prev"></div> -->
+
+		</div>
+
+	</section>
+	<!-- home section ends -->
+
+	<!-- pricing section stars -->
+
+	<section class="pricing" id="pricing">
+
+		<h1 class="heading"> our paints list</h1>
+
+		<div class="box-container">
+			
+			<div class="box">
+				<i class="fas fa-paint-roller"></i>
+				<h3>paints</h3>
+				<div class="price"><span>+++</span>+++<span>++</span></div>
+				<div class="list">
+					<p>01. Vinly silk emulsion paints</p>
+					<p>02. Weather guard emulsion paints</p>
+					<p>03. Primer paints emulsion</p>
+					<p>04. Under coat emulsion paints</p>
+					<p>05. Italian stuco</p>
+					<p>06. dueton paints </p>
+					<p>07. Texture pest</p>
+					<p>08. Mable stone paint</p>
+					<p>09. primix paints</p>
+					<p>10. matt paints emulsion</p>
+					<p>11. Oil paints</p>
+					<p>etc</p>
+				</div>
+				<a href="#" class="btn">choose your paint</a>
+			</div>
+
+			<!-- <div class="box">
+				<i class="fas fa-brush"></i>
+				<h3>paints</h3>
+				<div class="price"><span>+++</span>+++<span>++</span></div>
+				<div class="list">
+					<p>01. Vinly silk emulsion paints</p>
+					<p>02. Weather guard emulsion paints</p>
+					<p>03. Primer paints emulsion</p>
+					<p>04. Under coat emulsion paints</p>
+					<p>05. Italian stuco</p>
+					<p>06. dueton paints </p>
+					<p>07. Texture pest</p>
+					<p>08. Mable stone paint</p>
+					<p>09. primix paints</p>
+					<p>10. matt paints emulsion</p>
+					<p>11. 0oil paints</p>
+					<p>etc</p>
+				</div>
+				<a href="#" class="btn">choose your paint</a>
+			</div>
+
+			<div class="box">
+				<i class="fas fa-fill-drip"></i>
+				<h3>paints</h3>
+				<div class="price"><span>+++</span>+++<span>++</span></div>
+				<div class="list">
+					<p>01. Vinly silk emulsion paints</p>
+					<p>02. Weather guard emulsion paints</p>
+					<p>03. Primer paints emulsion</p>
+					<p>04. Under coat emulsion paints</p>
+					<p>05. Italian stuco</p>
+					<p>06. dueton paints </p>
+					<p>07. Texture pest</p>
+					<p>08. Mable stone paint</p>
+					<p>09. primix paints</p>
+					<p>10. matt paints emulsion</p>
+					<p>11. 0oil paints</p>
+					<p>etc</p>
+				</div>
+				<a href="#" class="btn">choose your paint</a>
+			</div> -->
+		</div>
+	</section>
+
+	<!-- pricing section ends -->
+
+	<!-- projects section starts -->
+
+	<section class="projects" id="projects">
+
+		<!-- <div class="project-bg swiper">
+    		<div class="swiper-wrapper">
+
+        		<div class="swiper-slide">
+            		<img src="images/IMG-20260309-WA0075.jpg" alt="">
+        		</div>
+
+        		<div class="swiper-slide">
+            		<img src="images/IMG-20260309-WA0075.jpg" alt="">
+        		</div>
+
+        		<div class="swiper-slide">
+            		<img src="images/IMG-20260309-WA0081.jpg" alt="">
+        		</div>
+
+				<div class="swiper-slide">
+            		<img src="images/IMG-20260309-WA0113.jpg" alt="">
+        		</div>
+
+    		</div>
+		</div> -->
+
+		<h1 class="heading"> our projects</h1>
+
+		<div class="box-container">
+
+			<a href="images/IMG-20260309-WA0123.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260309-WA0123.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>marble design</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260309-WA0108.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260309-WA0108.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>marble designing</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260309-WA0113.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260309-WA0113.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>marble designing</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260309-WA0109.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260309-WA0109.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>construction, design</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260309-WA0087.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260309-WA0087.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>construction, design</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260309-WA0081.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260309-WA0081.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>construction, design</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260309-WA0099.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260309-WA0099.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>construction, design</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260309-WA0093.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260309-WA0093.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>construction, design</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260309-WA0096.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260309-WA0096.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>construction, design</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260309-WA0132.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260309-WA0132.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>construction, design</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260312-WA0019.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260312-WA0019.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>construction, design</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260312-WA0020.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260312-WA0020.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>construction, design</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260309-WA0137.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260309-WA0137.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>construction, design</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260309-WA0144.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260309-WA0144.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>construction, design</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+
+			<a href="images/IMG-20260309-WA0149.jpg" class="box">
+				<div class="image">
+					<img src="images/IMG-20260309-WA0149.jpg" alt="" loading="lazy">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>construction, design</p>
+					</div>
+					<i class="fas fa-plus"></i>
+				</div>
+			</a>
+		</div>
+	</section>
+	<!-- projects section ends -->
+
+	<!-- Updated about starts -->
+	<section class="about" id="about">
+    	<h1 class="heading">Field Work</h1>
+
+	    <div class="row">
+
+			<div class="row row-left">
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0154.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0156.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0157.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0066.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>Factory Color Mixing</h3>
+						<p>We will provide you the best work</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0155.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We will provide you the best work</h3>
+						<p>Services you never find else where</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0153.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+			</div>
+	        
+	    </div>
+
+		<div class="row">
+			<div class="row row-right">
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0154.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0156.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0060.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+				
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0061.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0064.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0069.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<a href="#services" class="btn">read more</a>
+
+	    <div class="box-container">
+	        <div class="box"><h3>10+</h3><p>years of experience</p></div>
+	        <div class="box"><h3>1500+</h3><p>project completed</p></div>
+	        <div class="box"><h3>743+</h3><p>satisfied clients</p></div>
+	        <div class="box"><h3>157+</h3><p>active workers</p></div>
+	    </div>
+	</section>
+	<!-- Updated about ends -->
+
+	<!-- services section starts -->
+
+	<section class="services" id="services">
+
+    	<h1 class="heading">Our work</h1>
+
+    	<!-- TOP ROW -->
+    	<div class=" swiper services-slider top-slider">
+
+        	<div class="swiper-wrapper">
+
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0093.jpg" alt="">
+
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Luxury Construction</h3>
+                    	<p>Modern premium infrastructure and elegant architecture.</p>
+                	</div>
+            	</div>
+
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0080.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Interior Design</h3>
+                    	<p>Luxury interiors crafted with modern aesthetics.</p>
+                	</div>
+            	</div>
+
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0098.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0132.jpg" alt="">
+
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Luxury Construction</h3>
+                    	<p>Modern premium infrastructure and elegant architecture.</p>
+                	</div>
+            	</div>
+
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260312-WA0020.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Interior Design</h3>
+                    	<p>Luxury interiors crafted with modern aesthetics.</p>
+                	</div>
+            	</div>
+
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0081.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+        	</div>
+
+    	</div>
+
+    	<!-- SECOND ROW -->
+    	<div class="swiper services-slider bottom-slider">
+
+        	<div class="swiper-wrapper">
+
+            	<!-- Add more cards -->
+				 <!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0113.jpg" alt="">
+
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Luxury Construction</h3>
+                    	<p>Modern premium infrastructure and elegant architecture.</p>
+                	</div>
+            	</div>
+
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0096.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Interior Design</h3>
+                    	<p>Luxury interiors crafted with modern aesthetics.</p>
+                	</div>
+            	</div>
+
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0098.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0149.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0127.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0123.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0122.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0115.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0114.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0111.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+            	<!-- Duplicate again at end -->
+
+        	</div>
+
+    	</div>
+
+	</section>
+	<!-- services section ends -->
+
+	<!-- reviews section starts -->
+
+	<section class="reviews">
+
+		<h1 class="heading"> clients reviews </h1>
+
+		<div class="swiper reviews-slider">
+
+			<div class="swiper-wrapper">
+
+				<div class="swiper-slide slider">
+					<p>The team delivered elegant marble work and flawless painting with exceptional precision. Everything was completed neatly, on schedule, and with a high-end professional touch.</p>
+					<div class="user">
+						<img src="images/Face(5).jpeg" alt="" loading="lazy">
+						<div class="info">
+							<h3>Mirry Willie</h3>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<!-- <i class="fas fa-star"></i>
+								<i class="fas fa-star"></i> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide slider">
+					<p>Very impressed with the quality of the painting and marble installation. The colors were perfectly matched, the surfaces were smooth, and the craftsmanship was outstanding from start to finish.</p>
+					<div class="user">
+						<img src="images/Face(4).jpeg" alt="" loading="lazy">
+						<div class="info">
+							<h3>Nshim Nikia</h3>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<!-- <i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide slider">
+					<p>The marble finishing and paint work completely transformed the space. The attention to detail, clean edges, and premium finish gave the entire building a luxurious feel.</p>
+					<div class="user">
+						<img src="images/Face(3).jpeg" alt="" loading="lazy">
+						<div class="info">
+							<h3>Kwiera Godfrey</h3>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<!-- <i class="fas fa-star"></i> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide slider">
+					<p>We were impressed by the professionalism, speed, and quality of work. The team kept us updated at every stage and delivered exactly what was promised. The results speak for themselves.</p>
+					<div class="user">
+						<img src="images/Face.jpeg" alt="" loading="lazy">
+						<div class="info">
+							<h3>Morgan Tery</h3>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide slider">
+					<p>Excellent workmanship and very smooth communication throughout the project. Every detail was handled carefully, and the final structure looks modern, strong, and beautifully finished.</p>
+					<div class="user">
+						<img src="images/Face(1).jpeg" alt="" loading="lazy">
+						<div class="info">
+							<h3>Eric Neo</h3>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide slider">
+					<p>From the planning stage to the final finish, the team was professional, organized, and detail-oriented. The quality of the construction exceeded our expectations and the project was completed on time. Highly recommended</p>
+					<div class="user">
+						<img src="images/Face(2).jpeg" alt="" loading="lazy">
+						<div class="info">
+							<h3>Andrew Freyman</h3>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- reviews section ends -->
+
+	<!-- contact section starts -->
+
+	<section class="contact" id="contact">
+
+		<h1 class="heading"> contact us </h1>
+
+		<div class="row">
+
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d900.1778608466315!2d32.56570580602533!3d0.28941914397325236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbd003a0f1ee1%3A0xc2dc040d80efdf40!2sMTEX%20Uganda%20Limited!5e0!3m2!1sen!2sug!4v1778160251563!5m2!1sen!2sug" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+			<form action="" class="form-group">
+				<h3>get in touch</h3>
+				<label for="name">name</label>
+				<input type="text" id="name" name="name" placeholder="name" class="box" required>
+				<input type="email" id="email" name="email" placeholder="email" class="box" required>
+				<input type="number" id="phone" name="phone" placeholder="phone" class="box">
+				<textarea name="message" placeholder="message" class="box" id="message" cols="30" rows="10"></textarea>
+				<input type="submit" value="send message" class="btn">
+			</form>
+		</div>
+
+	</section>
+	<!-- contact section ends -->
+
+	<!-- blogs section starts -->
+
+	<section class="blogs" id="blogs">
+
+		<h1 class="heading"> our staffs </h1>
+
+		<div class="swiper blogs-slider">
+
+			<div class="swiper-wrapper">
+				<div class="swiper-slide slide">
+					<div class="image">
+						<img src="images/IMG-20260312-WA0035.jpg" alt="" loading="lazy">
+					</div>
+					<div class="content">
+						<h3>Improvement:</h3>
+						<p>Always learning and improving your skills.</p>
+						<a href="staff.html" class="btn">read more</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide slide">
+					<div class="image">
+						<img src="images/IMG-20260312-WA0029.jpg" alt="" loading="lazy">
+					</div>
+					<div class="content">
+						<h3>Professionalism:</h3>
+						<p>Handle responsibilities with maturity and respect.</p>
+						<a href="staff.html" class="btn">read more</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide slide">
+					<div class="image">
+						<img src="images/IMG-20260312-WA0031.jpg" alt="" loading="lazy">
+					</div>
+					<div class="content">
+						<h3>Dedication:</h3>
+						<p>Commitment to your role is clear in everything you do.</p>
+						<a href="staff.html" class="btn">read more</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide slide">
+					<div class="image">
+						<img src="images/IMG-20260312-WA0033.jpg" alt="" loading="lazy">
+					</div>
+					<div class="content">
+						<h3>Teamwork:</h3>
+						<p>Work well with others and support your colleagues effectively.</p>
+						<a href="staff.html" class="btn">read more</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide slide">
+					<div class="image">
+						<img src="images/IMG-20260312-WA0032.jpg" alt="" loading="lazy">
+					</div>
+					<div class="content">
+						<h3>Reliability:</h3>
+						<p>Can always be trusted to complete tasks on time and with care.</p>
+						<a href="staff.html" class="btn">read more</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide slide">
+					<div class="image">
+						<img src="images/IMG-20260312-WA0034.jpg" alt="" loading="lazy">
+					</div>
+					<div class="content">
+						<h3>Excellence:</h3>
+						<p>Consistently deliver high-quality work with great attention to detail.</p>
+						<a href="#" class="btn">read more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- blogs section ends -->
+
+	<!-- client logo section starts -->
+
+	<section class="logo-container">
+		<div class="swiper logo-slider">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide slide"><img src="images/IMG-20260309-WA0136.jpg" alt="" loading="lazy"></div>
+				<div class="swiper-slide slide"><img src="images/IMG-20260309-WA0141.jpg" alt="" loading="lazy"></div>
+				<div class="swiper-slide slide"><img src="images/IMG-20260309-WA0146.jpg" alt="" loading="lazy"></div>
+				<div class="swiper-slide slide"><img src="images/IMG-20260309-WA0148.jpg" alt="" loading="lazy"></div>
+				<div class="swiper-slide slide"><img src="images/IMG-20260309-WA0139.jpg" alt="" loading="lazy"></div>
+				<div class="swiper-slide slide"><img src="images/IMG-20260309-WA0126.jpg" alt="" loading="lazy"></div>
+			</div>
+		</div>
+	</section>
+	<!-- client logo section ends -->
+
+	<!-- footer section starts -->
+	<section class="footer">
+
+		<div class="links">
+			<a class="btn" href="#home">home</a>
+			<a class="btn" href="#about">fields</a>
+			<a class="btn" href="#services">work</a>
+			<a class="btn" href="#projects">pictures</a>
+			<a class="btn" href="#pricing">list</a>
+			<a class="btn" href="#contact">contact</a>
+			<a class="btn" href="#blogs">blogs</a>
+		</div>
+
+		<div class="credit">created by <span>mr. niyonzima amos</span> | &copy; 2026 all rights reserved!</div>
+	</section>
+	<!-- footer section ends -->
+
+	<div id="videoPopup" class="video-popup">
+    	<span id="closePopup">&times;</span>
+    	<video id="popupVideo" controls></video>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+	<!-- custom javascript -->
+	<script src="js/script.js" defer></script>
+
+	<div class="project-lightbox">
+		<div class="project-lightbox-close">&times;</div>
+
+		<div class="swiper project-lightbox-swiper">
+			<div class="swiper-wrapper"></div>
+
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+	</div>
+
+</body>
+</html>

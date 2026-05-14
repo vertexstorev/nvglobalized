@@ -1,0 +1,168 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Sign Up</title>
+
+    <!-- custom css file link -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- custom javascript file link -->
+	 <!-- custom javascript file link -->
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+	<script src="js/supabase.js"></script>
+	<script src="js/script.js" defer></script>
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+</head>
+
+<body>
+
+	<header class="header">
+
+		<a href="index.html#home" class="logo">NV.<span>GLOBALIZED</span></a>
+
+		<nav class="navbar">
+			<a href="index.html">home</a>
+			<a href="index.html#about">fields</a>
+			<a href="index.html#services">work</a>
+			<a href="index.html#projects">pictures</a>
+			<a href="index.html#pricing">list</a>
+			<a href="index.html#contact">contact</a>
+			<a href="staff.html">staff</a>
+		</nav>
+
+	</header>
+
+	<section class="signup">
+
+		<div class="form-container">
+
+			<h2>Create <span>Account</span></h2>
+
+			<div class="input-box">
+				<input type="text" id="fullname" placeholder="Full Name">
+			</div>
+
+			<div class="input-box">
+				<input type="email" id="email" placeholder="Email Address">
+			</div>
+
+			<div class="input-box">
+				<input type="password" id="password" placeholder="Password">
+			</div>
+
+			<div class="input-box">
+				<input type="password" id="confirmPassword" placeholder="Confirm Password">
+			</div>
+
+			<button type="submit" onclick="sendEmail()" id="signupBtn" class="btn">Sign Up</button>
+
+			<p>Already have an account? <a href="index.html#login">Login</a></p>
+
+		</div>
+
+	</section>
+
+        <!-- footer section starts -->
+	<section class="footer">
+
+		<div class="links">
+			<a class="btn" href="index.html#home">home</a>
+			<a class="btn" href="index.html#about">fields</a>
+			<a class="btn" href="index.html#services">work</a>
+			<a class="btn" href="index.html#projects">pictures</a>
+			<a class="btn" href="index.html#pricing">list</a>
+			<a class="btn" href="index.html#contact">contact</a>
+			<a class="btn" href="index.html#blogs">blogs</a>
+		</div>
+
+		<div class="credit">created by <span>mr. niyonzima amos</span> | &copy; 2026 all rights reserved!</div>
+	</section>
+	<!-- footer section ends -->
+
+	<script>
+
+	//////////////////////////////
+	// SIGNUP SYSTEM
+	//////////////////////////////
+
+	const signupBtn =
+		document.querySelector("#signupBtn");
+
+	signupBtn.addEventListener("click", async () => {
+
+		const fullName =
+			document.querySelector("#fullname").value;
+
+		const email =
+			document.querySelector("#email").value;
+
+		const password =
+			document.querySelector("#password").value;
+
+		const confirmPassword =
+			document.querySelector("#confirmPassword").value;
+
+
+		//////////////////////////////
+		// PASSWORD CHECK
+		//////////////////////////////
+
+		if (password !== confirmPassword) {
+
+			alert("Passwords do not match");
+
+			return;
+		}
+
+
+		//////////////////////////////
+		// SIGN UP USER
+		//////////////////////////////
+
+		const { data, error } =
+			await supabaseClient.auth.signUp({
+
+				email,
+				password,
+
+				options: {
+
+					data: {
+
+						full_name: fullName,
+
+					},
+
+				},
+
+			});
+
+
+		//////////////////////////////
+		// RESPONSE
+		//////////////////////////////
+
+		if (error) {
+
+			alert(error.message);
+
+		} else {
+
+			alert("Account created successfully");
+
+			window.location.href = "index.html";
+
+		}
+
+	});
+
+	</script>
+
+</body>
+</html>

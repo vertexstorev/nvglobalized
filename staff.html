@@ -1,0 +1,140 @@
+<html>
+    <head>
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Executive Staff</title>
+    </head>
+
+    <body class="staff-page">
+        
+        <section class="team-section">
+
+        <div class="section-header">
+            
+            <h1>Executive Nvglobalized Team</h1>
+            <p>
+            Meet the experienced professionals leading our organization with innovation,
+            strategic planning, operational excellence, and customer-focused leadership.
+            </p>
+        </div>
+
+        <div class="team-container">
+
+            <!-- CEO -->
+            <div class="staff-card">
+            <div class="image-box">
+                <img src="images/Screenshot 2026-05-12 030447.png" alt="CEO Photo">
+            </div>
+
+            <div class="staff-info">
+                <h2>JOHN ANDERSON</h2>
+                <span class="role">Chief Executive Officer (CEO)</span>
+
+                <ul>
+                <li>Over 15 years of executive leadership experience.</li>
+                <li>Specialized in strategic business growth and innovation.</li>
+                <li>Expert in financial management and corporate governance.</li>
+                <li>Led multiple successful international expansion projects.</li>
+                <li>Strong background in team leadership and staff development.</li>
+                <li>Passionate about technology transformation and modernization.</li>
+                <li>Experienced in investor relations and business partnerships.</li>
+                <li>Focused on sustainable organizational growth and excellence.</li>
+                <li>Recognized for high-performance leadership and mentorship.</li>
+                <li>Dedicated to building strong client and stakeholder relationships.</li>
+                </ul>
+            </div>
+            </div>
+
+            <!-- DIRECTOR -->
+            <div class="staff-card">
+            <div class="image-box">
+                <img src="images/Screenshot 2026-05-12 030525.png" alt="Director Photo">
+            </div>
+
+            <div class="staff-info">
+                <h2>SARAH MITCHELL</h2>
+                <span class="role">Operations Director</span>
+
+                <ul>
+                <li>Expert in operations management and workflow optimization.</li>
+                <li>Over 10 years of experience in organizational coordination.</li>
+                <li>Strong ability to manage large teams and departments.</li>
+                <li>Skilled in project planning and execution strategies.</li>
+                <li>Experienced in customer service and performance management.</li>
+                <li>Specialized in policy development and implementation.</li>
+                <li>Excellent communication and conflict resolution abilities.</li>
+                <li>Dedicated to operational efficiency and quality assurance.</li>
+                <li>Strong analytical and problem-solving capabilities.</li>
+                <li>Committed to maintaining professional organizational standards.</li>
+                </ul>
+            </div>
+            </div>
+
+            <!-- MANAGER -->
+            <div class="staff-card">
+            <div class="image-box">
+                <img src="images/Screenshot 2026-05-12 030327.png" alt="Manager Photo">
+            </div>
+
+            <div class="staff-info">
+                <h2>Salim Ali</h2>
+                <span class="role">Senior Department Manager</span>
+
+                <ul>
+                <li>Experienced in staff supervision and daily operations management.</li>
+                <li>Strong leadership skills with a focus on productivity improvement.</li>
+                <li>Expert in client relationship management and support services.</li>
+                <li>Skilled in administrative planning and resource coordination.</li>
+                <li>Experienced in preparing performance and operational reports.</li>
+                <li>Strong understanding of business processes and workflow systems.</li>
+                <li>Committed to teamwork, discipline, and professional ethics.</li>
+                <li>Excellent time management and organizational skills.</li>
+                <li>Focused on employee development and motivation strategies.</li>
+                <li>Dedicated to achieving departmental goals and company objectives.</li>
+                </ul>
+            </div>
+            </div>
+
+        </div>
+
+        </section>
+
+        <!-- footer section starts -->
+	<section class="footer">
+
+		<div class="links">
+			<a class="btn" href="index.html#home">home</a>
+			<a class="btn" href="index.html#about">fields</a>
+			<a class="btn" href="index.html#services">work</a>
+			<a class="btn" href="index.html#projects">pictures</a>
+			<a class="btn" href="index.html#pricing">list</a>
+			<a class="btn" href="index.html#contact">contact</a>
+			<a class="btn" href="index.html#blogs">blogs</a>
+		</div>
+
+		<div class="credit">created by <span>mr. niyonzima amos</span> | &copy; 2026 all rights reserved!</div>
+	</section>
+	<!-- footer section ends -->
+
+    <script>
+        fetch("index.html")
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector(".header").innerHTML = data;
+        });
+    </script>
+
+    </body>
+
+</html>
