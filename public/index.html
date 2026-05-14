@@ -18,19 +18,8 @@
 
 	<!-- custom javascript file link -->
 	 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-	 <script src="js/supabase.js"></script>
+	 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 	 <!-- <script src="js/script.js" defer></script> -->
-
-	 <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-	</script>
-	<script type="text/javascript">
-	(function(){
-		emailjs.init({
-			publicKey: "1f5eT5uTinI2-vnIZ",
-		});
-	})();
-	</script>
 
 </head>
 <body>
@@ -954,10 +943,17 @@
 				<h3>get in touch</h3>
 				<label for="name">name</label>
 				<input type="text" id="name" name="name" placeholder="name" class="box" required>
+				
+				<label for="email">email</label>
 				<input type="email" id="email" name="email" placeholder="email" class="box" required>
+				
+				<label for="phone">phone</label>
 				<input type="number" id="phone" name="phone" placeholder="phone" class="box">
+				
+				<label for="message">message</label>
 				<textarea name="message" placeholder="message" class="box" id="message" cols="30" rows="10"></textarea>
-				<input type="submit" value="send message" class="btn">
+				
+				<button type="button" onclick="sendEmail()" class="btn" value="send message">Send Message</button>
 			</form>
 		</div>
 
