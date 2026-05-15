@@ -1,14 +1,13 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "web2",
+  "main": "src/b_worker.js",
   "compatibility_date": "2026-05-14",
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "./public"
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+    "directory": "./public",
+    "binding": "ASSETS"
+  }
 }

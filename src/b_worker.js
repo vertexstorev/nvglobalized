@@ -1,71 +1,8 @@
-// export default {
-//   async fetch(request, env) {
-
-//     // Access keys safely here
-//     const supabaseUrl = env.SUPABASE_URL
-//     const supabaseKey = env.SUPABASE_ANON_KEY
-
-//     // Handle form submission
-//     if (request.method === "POST") {
-//       const body = await request.json()
-
-//       // Call Supabase
-//       const response = await fetch(`${supabaseUrl}/rest/v1/feedback`, {
-//         method: "POST",
-//         headers: {
-//           "apikey": supabaseKey,
-//           "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(body)
-//       })
-
-//       return new Response("Success", { status: 200 })
-//     }
-
-//     return new Response("Not found", { status: 404 })
-//   }
-// }
-
-// // Handle WhatsApp notification via Twilio
-// if (pathname === "/notify" && request.method === "POST") {
-//   const body = await request.json()
-
-//   // Twilio credentials from wrangler secrets
-//   const accountSid = env.TWILIO_ACCOUNT_SID
-//   const authToken = env.TWILIO_AUTH_TOKEN
-
-//   // Twilio API call
-//   const twilioResponse = await fetch(
-//     `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`,
-//     {
-//       method: "POST",
-//       headers: {
-//         "Authorization": "Basic " + btoa(`${accountSid}:${authToken}`),
-//         "Content-Type": "application/x-www-form-urlencoded"
-//       },
-//       body: new URLSearchParams({
-//         From: "whatsapp:+14155238886",
-//         To: "whatsapp:+256784918779",
-//         Body: `New message from ${body.name}: ${body.message}`
-//       })
-//     }
-//   )
-
-//   const result = await twilioResponse.json()
-
-//   if (result.error_code) {
-//     return new Response("Twilio error", { status: 500 })
-//   }
-
-//   return new Response("WhatsApp sent", { status: 200 })
-// }
-
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
 
     const { pathname } = new URL(request.url)
 
-    // ─── CORS HEADERS ─────────────────────────────────
     const headers = {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "POST, OPTIONS",
@@ -73,7 +10,6 @@ export default {
       "Content-Type": "application/json"
     }
 
-    // Handle preflight
     if (request.method === "OPTIONS") {
       return new Response(null, { headers })
     }
@@ -82,7 +18,6 @@ export default {
     if (pathname === "/feedback" && request.method === "POST") {
       const body = await request.json()
 
-      // 1. Save to Supabase
       const dbResponse = await fetch(`${env.SUPABASE_URL}/rest/v1/feedback`, {
         method: "POST",
         headers: {
@@ -106,7 +41,6 @@ export default {
         )
       }
 
-      // 2. Send WhatsApp via Twilio
       const accountSid = env.TWILIO_ACCOUNT_SID
       const authToken = env.TWILIO_AUTH_TOKEN
 
@@ -194,9 +128,8 @@ export default {
       )
     }
 
-    return new Response(
-      JSON.stringify({ error: "Not found" }),
-      { status: 404, headers }
-    )
+    // ─── SERVE STATIC FILES ───────────────────────────
+    return env.ASSETS.fetch(request)
+
   }
 }
