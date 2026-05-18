@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -13,7 +14,8 @@
 	 <!-- custom javascript file link -->
 	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-	<script src="js/script.js" defer></script>
+	<script src="js/sbase.js" defer></script>
+	<!-- <script src="js/script.js"></script> -->
 </head>
 
 <body>
@@ -29,7 +31,7 @@
 			<a href="index.html#projects">pictures</a>
 			<a href="index.html#pricing">list</a>
 			<a href="index.html#contact">contact</a>
-			<a href="staff.html">staff</a>
+			<a href="/staff.html">staff</a>
 		</nav>
 
 	</header>
@@ -41,19 +43,19 @@
 			<h2>Create <span>Account</span></h2>
 
 			<div class="input-box">
-				<input type="text" id="fullname" placeholder="Full Name">
+				<input type="text" id="signup-fullname" placeholder="Full Name">
 			</div>
 
 			<div class="input-box">
-				<input type="email" id="email" placeholder="Email Address">
+				<input type="email" id="signup-email" placeholder="Email Address">
 			</div>
 
 			<div class="input-box">
-				<input type="password" id="password" placeholder="Password">
+				<input type="password" id="signup-password" placeholder="Password">
 			</div>
 
 			<div class="input-box">
-				<input type="password" id="confirmPassword" placeholder="Confirm Password">
+				<input type="password" id="signup-confirmPassword" placeholder="Confirm Password">
 			</div>
 
 			<button type="submit" id="signupBtn" class="btn">Sign Up</button>
@@ -81,69 +83,7 @@
 	</section>
 	<!-- footer section ends -->
 
-	<script>
-
-	//////////////////////////////
-	// SIGNUP SYSTEM
-	//////////////////////////////
-
-	const signupBtn =
-		document.querySelector("#signupBtn");
-
-	signupBtn.addEventListener("click", async () => {
-
-		const fullName =
-			document.querySelector("#fullname").value;
-
-		const email =
-			document.querySelector("#email").value;
-
-		const password =
-			document.querySelector("#password").value;
-
-		const confirmPassword =
-			document.querySelector("#confirmPassword").value;
-
-
-		//////////////////////////////
-		// PASSWORD CHECK
-		//////////////////////////////
-
-		if(!fullName || !email || !password){
-			alert("Please fill in all fields");
-			return;
-		}
-		if (password !== confirmPassword) {
-			alert("Passwords do not match");
-			return;
-		}
-	
-		//////////////////////////////
-		// SIGN UP USER
-		//////////////////////////////
-
-		const response = await fetch("https://www.nvglobalizedug.com/signup",{
-			method: "POST",
-			Headers: {"Content-Type": "application/json"},
-			body: JSON.stringify({email, password, fullName})
-		})
-
-
-		//////////////////////////////
-		// RESPONSE
-		//////////////////////////////
-
-		const data = await response.json()
-		if (data.error){
-			alert(data.error)
-		} else {
-			alert("Acount created! Check your email for verification link.")
-			window.location.href = "index.html#login"
-		}
-
-	});
-
-	</script>
+	<script type="module" src="./js/sbase.js"></script>
 
 </body>
 </html>

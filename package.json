@@ -1,9 +1,11 @@
 {
   "dependencies": {
+    "@supabase/ssr": "^0.10.3",
     "@supabase/supabase-js": "^2.105.4",
     "dotenv": "^17.4.2"
   },
   "devDependencies": {
+    "supabase": "^2.98.2",
     "wrangler": "^4.90.1"
   },
   "scripts": {

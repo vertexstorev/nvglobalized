@@ -482,136 +482,139 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Feed Back Handler!
-// async function submitFeedback() {
-//   const data = {
-//     name: document.querySelector("#name").value,
-//     email: document.querySelector("#email").value,
-//     phone: document.querySelector("#phone").value,
-//     message: document.querySelector("#message").value
-//   }
+async function submitFeedback() {
+  const data = {
+    name: document.querySelector("#name").value,
+    email: document.querySelector("#email").value,
+    phone: document.querySelector("#phone").value,
+    message: document.querySelector("#message").value
+  }
 
-//   const response = await fetch("https://nvglobalizedug.com/feedback", {
-//     method: "POST",
-//     headers: { "Content-Type": "application/json" },
-//     body: JSON.stringify(data)
-//   })
+  const response = await fetch("https://nvglobalizedug.com/feedback", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  })
 
-//   if (response.ok) {
-//     alert("Submitted successfully!")
-//   }
-// }
+  if (response.ok) {
+    alert("Submitted successfully!")
+  }
+}
 
-// // Initialize EmailJS
-// emailjs.init("JYy2JApM1YPYVQmFD")
-
-// // Send email directly from frontend
-// function sendEmail() {
-//   const parms = {
-//     name: document.querySelector("#name").value,
-//     email: document.querySelector("#email").value,
-//     phone: document.querySelector("#phone").value,
-//     message: document.querySelector("#message").value
-//   }
-
-//   emailjs.send("service_1fdsi6e", "template_2hahcb9", parms)
-//   .then(() => {
-//     alert("Email sent successfully!")
-//     document.querySelector(".form-group").reset()
-//   })
-//   .catch((error) => {
-//     alert("Failed to send email")
-//     console.log("Error:", error)
-//   })
-// }
-
-// async function notifyWhatsApp(name, message) {
-//   await fetch("https://www.nvglobalizedug.com/notify", {
-//     method: "POST",
-//     headers: { "Content-Type": "application/json" },
-//     body: JSON.stringify({ name, message })
-//   })
-// }
-
-// ─── EMAILJS INIT ─────────────────────────────────────
+// Initialize EmailJS
 emailjs.init("JYy2JApM1YPYVQmFD")
 
-const WORKER_URL = "https://www.nvglobalizedug.com"
-
-// ─── CONTACT FORM / FEEDBACK ──────────────────────────
+// Send email directly from frontend
 function sendEmail() {
-  const name = document.querySelector("#name").value
-  const email = document.querySelector("#email").value
-  const phone = document.querySelector("#phone").value
-  const message = document.querySelector("#message").value
-
-  if (!name || !email || !message) {
-    alert("Please fill in all required fields")
-    return
+  const parms = {
+    name: document.querySelector("#name").value,
+    email: document.querySelector("#email").value,
+    phone: document.querySelector("#phone").value,
+    message: document.querySelector("#message").value
   }
 
-  // 1. Send email via EmailJS
-  emailjs.send("service_1fdsi6e", "template_2hahcb9", {
-    name, email, phone, message
+  emailjs.send("service_1fdsi6e", "template_2hahcb9", parms)
+  .then(() => {
+    alert("Email sent successfully!")
+    document.querySelector("#formgroup").reset()
   })
-  .then(() => console.log("Email sent!"))
-  .catch((error) => console.log("EmailJS error:", error))
-
-  // 2. Save to Supabase + notify via WhatsApp
-  fetch(`${WORKER_URL}/feedback`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email, phone, message })
+  .catch((error) => {
+    alert("Failed to send email")
+    console.log("Error:", error)
   })
-  .then((res) => res.json())
-  .then((data) => {
-    if (data.success) {
-      alert("Message sent successfully!")
-      document.querySelector(".form-group").reset()
-    } else {
-      alert("Something went wrong: " + data.error)
-    }
-  })
-  .catch((error) => console.log("Worker error:", error))
 }
 
-// ─── SIGNUP ───────────────────────────────────────────
-async function signUp() {
-  const email = document.getElementById("email").value
-  const password = document.getElementById("password").value
-
-  const response = await fetch(`${WORKER_URL}/signup`, {
+async function notifyWhatsApp(name, message) {
+  await fetch("https://www.nvglobalizedug.com/notify", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password })
+    body: JSON.stringify({ name, message })
   })
-
-  const data = await response.json()
-
-  if (data.error) {
-    alert(data.error)
-  } else {
-    alert(data.success)
-  }
 }
 
-// ─── SIGNIN ───────────────────────────────────────────
-async function signIn() {
-  const email = await document.getElementById("email").value
-  const password = await document.getElementById("password").value
 
-  const response = await fetch(`${WORKER_URL}/signin`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password })
-  })
 
-  const data = await response.json()
 
-  if (data.error) {
-    alert(data.error)
-  } else {
-    alert(data.success)
-    // Store user session
-    localStorage.setItem("user", JSON.stringify(data.user))
-  }
-}
+// // ─── EMAILJS INIT ─────────────────────────────────────
+// emailjs.init("JYy2JApM1YPYVQmFD")
+
+// const WORKER_URL = "https://www.nvglobalizedug.com"
+
+// // ─── CONTACT FORM / FEEDBACK ──────────────────────────
+// function sendEmail() {
+//   const name = document.querySelector("#name").value
+//   const email = document.querySelector("#email").value
+//   const phone = document.querySelector("#phone").value
+//   const message = document.querySelector("#message").value
+
+//   if (!name || !email || !phone|| !message) {
+//     alert("Please fill in all required fields")
+//     return
+//   }
+
+//   // 1. Send email via EmailJS
+//   emailjs.send("service_1fdsi6e", "template_2hahcb9", {
+//     name, email, phone, message
+//   })
+//   .then(() => console.log("Email sent!"))
+//   .catch((error) => console.log("EmailJS error:", error))
+
+//   // 2. Save to Supabase + notify via WhatsApp
+//   fetch(`${WORKER_URL}/feedback`, {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify({ name, email, phone, message})
+//   })
+//   .then((res) => res.json())
+//   .then((data) => {
+//     if (data.success) {
+//       alert("Message sent successfully!")
+//       document.querySelector(".form-group").reset()
+//     } else {
+//       alert("Something went wrong: " + data.error)
+//     }
+//   })
+//   .catch((error) => console.log("Worker error:", error))
+// }
+
+// // ─── SIGNUP ───────────────────────────────────────────
+// async function signUp() {
+//   const email = document.getElementById("email").value
+//   const password = document.getElementById("password").value
+
+//   const response = await fetch(`${WORKER_URL}/signup`, {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify({ email, password })
+//   })
+
+//   const data = await response.json()
+
+//   if (data.error) {
+//     alert(data.error)
+//   } else {
+//     alert(data.success)
+//   }
+// }
+
+// // ─── SIGNIN ───────────────────────────────────────────
+// async function signIn() {
+//   const email = document.getElementById("email").value
+//   const password = await document.getElementById("password").value
+
+//   const response = await fetch(`${WORKER_URL}/signin`, {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify({ email, password })
+//   })
+
+//   const data = await response.json()
+
+//   if (data.error) {
+//     alert(data.error)
+//   } else {
+//     alert(data.success)
+//     // Store user session
+//     localStorage.setItem("user", JSON.stringify(data.user))
+//   }
+// }
